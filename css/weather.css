@@ -1,0 +1,249 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+}
+.weather {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.box {
+	background: url(../img/bg.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100%;
+
+}
+
+.nav {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+.system-nav {
+	height: 24px;
+	background-color: rgba(255, 255, 255, .2);
+
+}
+
+
+
+.weather-nav {
+	height: .44rem;
+	background-color: rgba(255, 255, 255, .2);
+	padding-left: .1rem;
+	padding-right: .1rem;
+}
+
+.location-icon {
+	width: .2rem;
+	height: .2rem;
+	background: url(../img/location.png) no-repeat center center;
+	background-size: .2rem .2rem;
+	margin-top: .12rem;
+}
+
+.location-city {
+	width: .8rem;
+	font-size: .16rem;
+	line-height: .44rem;
+	margin-left: .1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #fff;
+}
+
+.search-box {
+	width: calc(100% - 1.58rem);
+	height: .28rem;
+	margin-top: .08rem;
+	background-image: linear-gradient(to right, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .5) 100%);
+	margin-left: .2rem;
+	border-radius: .14rem;
+	padding-left: .14rem;
+	padding-right: .14rem;
+}
+
+.ipt {
+	display: block;
+	width: calc(100% - .2rem);
+	height: .28rem;
+	color: #fff;
+
+}
+
+.icon {
+	width: .2rem;
+	height: .2rem;
+	background: url(../img/search.png) no-repeat center center;
+	background-size: .2rem .2rem;
+	margin-top: .04rem;
+}
+
+.bodybox {
+	z-index: 1;
+	
+	
+	height: calc(100% - .44rem - 22px);
+
+	position: relative;
+	overflow-y: auto;
+}
+.bodybox-l{
+	
+}
+
+.list {
+
+	margin: 0 auto;
+	color: #FFFFFF;
+	background-color: rgba(255, 255, 255, .1);
+	padding: .1rem;
+	border-radius: .2rem;
+	box-shadow: 0px 0px 16px 2px rgba(255, 255, 255, .55) inset;
+}
+
+.list ul li {
+	height: .5rem;
+	line-height: .5rem;
+}
+
+.list>ul>li>span {
+	width: 2rem;
+	display: block;
+	float: left;
+	font-size: .25rem;
+	padding-left: .35rem;
+}
+
+.list>ul>li>div {
+	margin-left: .2rem;
+	width: .4rem;
+	float: left;
+}
+
+.list>ul>li>div>img {
+	width: 100%;
+	display: block;
+}
+
+.seven-days {
+
+	overflow-x: auto;
+}
+
+.uls {
+	width: 7rem;
+}
+
+.day {
+	margin-top: .1rem;
+	text-align: center;
+	font-size: .15rem;
+	color: #FFFFFF;
+	float: left;
+}
+
+.seven-days .day li {
+	width: .8rem;
+	background-color: rgba(255, 255, 255, .1);
+	padding: .1rem;
+	border-radius: .2rem;
+	box-shadow: 0px 0px 16px 2px rgba(255, 255, 255, .55) inset;
+}
+
+/* 搜索寬呼吸燈 */
+.breath {
+	animation: breath .8s linear 0s infinite alternate;
+}
+
+@keyframes breath {
+	from {
+		box-shadow: 0px 0px 4px 1px rgba(255, 247, 102, .1);
+	}
+
+	to {
+		box-shadow: 0px 0px 15px 1px rgba(255, 247, 102, .85);
+		border-radius: .14rem;
+	}
+}
+
+
+
+.parent {
+	perspective: 10rem;
+}
+
+.gezibox {
+	width: 2rem;
+	height: 2rem;
+	margin: 1rem auto;
+	position: relative;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	animation: r1 10s linear 0s infinite;
+}
+
+.child {
+	position: absolute;
+
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 2rem;
+	text-align: center;
+	color: #fff;
+	transition: transform .3s linear;
+}
+
+.c1 {
+	background: url(../img/u=4077466837,2951655394&fm=26&gp=0.jpg)no-repeat center center;
+	
+	transform: rotateY(0deg) translateZ(1rem);
+}
+
+.c2 {
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571923295004&di=9261ee612055771f05d02f17134a19a7&imgtype=0&src=http%3A%2F%2Fphoto.tuchong.com%2F2917257%2Ff%2F15844874.jpg)no-repeat center center;
+	
+	transform: rotateY(90deg) translateZ(1rem);
+}
+
+.c3 {
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571923295004&di=9261ee612055771f05d02f17134a19a7&imgtype=0&src=http%3A%2F%2Fphoto.tuchong.com%2F2917257%2Ff%2F15844874.jpg)no-repeat center center;
+	
+	transform: rotateY(180deg) translateZ(1rem);
+}
+
+.c4 {
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571923340629&di=38002b47829e05f7d77f2bf995bcd2b2&imgtype=jpg&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D1434619621%2C1642926971%26fm%3D214%26gp%3D0.jpg)no-repeat center center;
+	
+	transform: rotateY(270deg) translateZ(1rem);
+}
+
+.c5 {
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571923295003&di=c9b3b2ac9647ebcacbd37e36217bf9f5&imgtype=0&src=http%3A%2F%2Fstatic.i3.xywy.com%2Fcms%2F20151006%2Fc44b2bc6238d8def55a2f46d8a6eb11949941.jpg)no-repeat center center;
+	
+	transform: rotateX(90deg) translateZ(1rem);
+}
+
+.c6 {
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571923295003&di=3f0f4d6a16a55b09d859b6fa7a2e798e&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fc%2F5608f8750de75.jpg)no-repeat center center;
+	
+	transform: rotateX(270deg) translateZ(1rem);
+}
+
+@keyframes r1 {
+	from {
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+
+	to {
+		transform: rotateX(360deg) rotateY(360deg);
+	}
+}
